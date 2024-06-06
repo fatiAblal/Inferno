@@ -76,14 +76,14 @@ Qui, ho eseguito nuovamente il comando `ls` per esplorare il contenuto della dir
 Tra i file presenti, ho notato un file chiamato `download.dat`. Per visualizzare il contenuto di questo documento, ho utilizzato il comando `cat download.dat`, che ha restituito un risultato codificato in base64. Per decodificare il contenuto e visualizzarlo in chiaro, ho utilizzato il tool "Cyberchef”, uno strumento di decodifica avanzato utilizzato per convertire e visualizzare contenuti codificati in chiaro in modo rapido ed efficiente.
 
 <div style="text-align:center">
-    <img src="cyberchef.png" alt="Risultato decodifica Cyberchef">
+    <img src="images/cyberchef.png" alt="Risultato decodifica Cyberchef">
 </div>
 
 
 # PRIVILEGE ESCALATION
 
 Dopo aver trovato le credenziali, ho aperto un nuovo terminale e ho tentato di avviare una sessione SSH (Secure Shell) con l'host remoto specificato dall'indirizzo IP 10.0.2.11, utilizzando il comando: 
-- `ssh dante@10.0.2.11'
+- `ssh dante@10.0.2.11`
 
 Questo comando stabilisce una connessione crittografata con l'host remoto utilizzando l'account utente "dante". Successivamente, mi è stata richiesta la password dell'account "dante" per autenticarmi e accedere all'host remoto tramite SSH. Una volta autenticata con successo, sono stata connessa all'host remoto e ho ottenuto l'accesso alla sua shell per eseguire comandi e interagire con il sistema.
 
@@ -98,8 +98,8 @@ A questo punto, ho tentato una privilege escalation. Innanzitutto, ho utilizzato
 
 Successivamente, ho utilizzato il sito web "GTFObins", che ospita una vasta raccolta di tecniche e comandi per ottenere privilegi elevati su sistemi Unix-like e Linux. Dopo aver cercato il comando "tee", ho trovato i seguenti comandi per eseguire una privilege escalation:
 
-- `LFILE=/etc/sudoers'
-- `echo "dante ALL=(ALL) NOPASSWD:ALL" | sudo tee -a "$LFILE"'
+- `LFILE=/etc/sudoers`
+- `echo "dante ALL=(ALL) NOPASSWD:ALL" | sudo tee -a "$LFILE"`
 Il primo comando definisce una variabile di shell chiamata "LFILE" e le assegna il valore “/etc/sudoers”, che è il percorso del file sudoers contenente le regole di autorizzazione per l'uso del comando sudo nel sistema. Il secondo comando invece, aggiunge la linea “dante ALL=(ALL) NOPASSWD” al file `/etc/sudoers', consentendo all'utente "dante" di eseguire qualsiasi comando con sudo senza richiedere una password.
 
 Successivamente, ho utilizzato il comando `sudo bash -p` per avviare una nuova shell interattiva con i privilegi di root. Poiché l'utente "dante" ha ottenuto i privilegi di sudo senza richiesta di password nella fase precedente, questa nuova shell ha i pieni privilegi di root. Utilizzando il comando `cd /root`, sono passata alla directory "/root", ovvero la directory home dell'utente root. Dopodiché, ho utilizzato il comando `ls` per visualizzare tutti i file e le directory presenti in `/root` e ho notato che c'era solo un file denominato "proof.txt" ovvero il secondo documento che stavo cercando.
