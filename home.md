@@ -121,36 +121,34 @@ A seguire, abbiamo scoperto una vulnerabilità di riutilizzo delle credenziali, 
 Dopo aver esplorato il file system e scoperto ulteriori credenziali, abbiamo eseguito un processo di privilege escalation, ottenendo privilegi di root e dimostrando il totale controllo sulla macchina "Inferno".
 
 Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lista seguente sono elencate le diverse vulnerabilità, con i link alle rispettive pagine CWE e i relativi CVSS base scores:
-- **Credential Stuffing:** [Link](https://capec.mitre.org/data/definitions/600.html)
-  - **Severity media:** 6.5 : [link](AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N)
+- **Credential Stuffing:** [https://capec.mitre.org/data/definitions/600.html](https://capec.mitre.org/data/definitions/600.html)
+  - **Severity media:** 6.5 : [AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N](AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N)
 
-- **Code Injection:** [Link](https://owasp.org/www-community/attacks/Code_Injection)
+- **Code Injection:** [https://owasp.org/www-community/attacks/Code_Injection](https://owasp.org/www-community/attacks/Code_Injection)
   - **Severity alta:** 8.0 : [link](AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)
 
-- **Hardcoded Password:** [Link](https://cwe.mitre.org/data/definitions/259.html)
-  - **Severity media:** 6.6 : [link](AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L)
+- **Hardcoded Password:** [https://cwe.mitre.org/data/definitions/259.html](https://cwe.mitre.org/data/definitions/259.html)
+  - **Severity media:** 6.6 : [AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L](AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L)
 
-- **Sudo Misconfiguration:** [Link](https://cwe.mitre.org/data/definitions/250.html)
-  - **Severity alta:** 7.8 : [link](AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)
+- **Sudo Misconfiguration:** [https://cwe.mitre.org/data/definitions/250.html](https://cwe.mitre.org/data/definitions/250.html)
+  - **Severity alta:** 7.8 : [AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)](AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)
+
+
 
 
 ## REFERENZE
 
-[1] Vulnhub Labs, "Inferno", creata da Mindsflee, 6 dicembre 2020. [Online]. Disponibile: [link](https://www.vulnhub.com/?q=inferno)
+[1] Vulnhub Labs, "Inferno", creata da Mindsflee, 6 dicembre 2020. [Online]. Disponibile: [https://www.vulnhub.com/?q=inferno](https://www.vulnhub.com/?q=inferno)
 
-[2] Y. Wang, "Codiad Remote Code Execution Exploit", 2019. [Online]. Disponibile: [link](https://github.com/WangYihang/Codiad-Remote-Code-Execute-Exploit)
+[2] Y. Wang, "Codiad Remote Code Execution Exploit", 2019. [Online]. Disponibile: [https://github.com/WangYihang/Codiad-Remote-Code-Execute-Exploit](https://github.com/WangYihang/Codiad-Remote-Code-Execute-Exploit)
 
-[3] GCHQ, "CyberChef". [Online]. Disponibile: [link](https://gchq.github.io/CyberChef/)
+[3] GCHQ, "CyberChef". [Online]. Disponibile: [https://gchq.github.io/CyberChef/](https://gchq.github.io/CyberChef/)
 
-[4] GTFOBins, "GTFOBins". [Online]. Disponibile: [link](https://gtfobins.github.io/)
+[4] GTFOBins, "GTFOBins". [Online]. Disponibile: [https://gtfobins.github.io/](https://gtfobins.github.io/)
 
-[5] NVD, "CVSS v3.1 Base Score Calculator". [Online]. Disponibile: [link](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
+[5] NVD, "CVSS v3.1 Base Score Calculator". [Online]. Disponibile: [https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 
-[6] TryHackMe, "Inferno", creata da Mindsflee, 12 febbraio 2021. [Online]. Disponibile: [link](https://tryhackme.com/r/room/inferno)
-
-
-
-
+[6] TryHackMe, "Inferno", creata da Mindsflee, 12 febbraio 2021. [Online]. Disponibile: [https://tryhackme.com/r/room/inferno](https://tryhackme.com/r/room/inferno)
 
 
  
