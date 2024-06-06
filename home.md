@@ -16,9 +16,9 @@ Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identifi
   - `nmap 10.0.2.11`: per rilevare gli host, le porte aperte e i servizi in esecuzione sulla macchina target. Risultato: una lunga lista di open ports. Tuttavia, molte di queste sono rabbit holes, ovvero dei falsi positivi. Quindi per ovviare a questo problema è stata eseguita una variante di nmaps:
   - `nmaps -sCV 10.0.2.11 -vv`: per rilevare informazioni aggiuntive come dettagli sull’OS e potenziali vulnerabilità permettendo così l’identificazione dei servizi d’interesse per questa simulazione. Risultato: ci sono due porte effettivamente aperte e sono evidenziate nella figura sottostante:
 
-<div style="text-align:center">
+<p align="center">
     <img src="images/porteAperte.png" alt="Porte realmente aperte">
-</div>
+</p>
 
 
 - **Gobuster**: uno strumento di brute force utilizzato per scoprire file e directory nascosti su un server web. Ho utilizzato Gobuster con il comando:
