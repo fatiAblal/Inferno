@@ -28,9 +28,7 @@ Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identifi
 ## INITIAL ACCESS
 Tentando di accedere all'indirizzo 10.0.2.11/inferno nel browser, è comparsa una finestra di login che richiedeva l'inserimento di username e password di tipologia Basic Auth identificando così un possibile punto di ingresso nel server web.
 
-<div style="text-align:center">
-    <img src="images/finestraLogin.png" alt="Finestra di login ottenuta">
-</div>
+    <img src="images/finestraLogin.png" alt="Finestra di login ottenuta" align="center">
 
 
 # CREDENTIAL ACCESS
@@ -100,9 +98,9 @@ Successivamente, ho utilizzato il sito web "GTFObins", che ospita una vasta racc
 
 - `LFILE=/etc/sudoers`
 - `echo "dante ALL=(ALL) NOPASSWD:ALL" | sudo tee -a "$LFILE"`
-Il primo comando definisce una variabile di shell chiamata "LFILE" e le assegna il valore “/etc/sudoers”, che è il percorso del file sudoers contenente le regole di autorizzazione per l'uso del comando sudo nel sistema. Il secondo comando invece, aggiunge la linea “dante ALL=(ALL) NOPASSWD” al file `/etc/sudoers', consentendo all'utente "dante" di eseguire qualsiasi comando con sudo senza richiedere una password.
+Il primo comando definisce una variabile di shell chiamata "LFILE" e le assegna il valore “/etc/sudoers”, che è il percorso del file sudoers contenente le regole di autorizzazione per l'uso del comando sudo nel sistema. Il secondo comando invece, aggiunge la linea “dante ALL=(ALL) NOPASSWD” al file "/etc/sudoers", consentendo all'utente "dante" di eseguire qualsiasi comando con sudo senza richiedere una password.
 
-Successivamente, ho utilizzato il comando `sudo bash -p` per avviare una nuova shell interattiva con i privilegi di root. Poiché l'utente "dante" ha ottenuto i privilegi di sudo senza richiesta di password nella fase precedente, questa nuova shell ha i pieni privilegi di root. Utilizzando il comando `cd /root`, sono passata alla directory "/root", ovvero la directory home dell'utente root. Dopodiché, ho utilizzato il comando `ls` per visualizzare tutti i file e le directory presenti in `/root` e ho notato che c'era solo un file denominato "proof.txt" ovvero il secondo documento che stavo cercando.
+Successivamente, ho utilizzato il comando `sudo bash -p` per avviare una nuova shell interattiva con i privilegi di root. Poiché l'utente "dante" ha ottenuto i privilegi di sudo senza richiesta di password nella fase precedente, questa nuova shell ha i pieni privilegi di root. Utilizzando il comando `cd /root`, sono passata alla directory "/root", ovvero la directory home dell'utente root. Dopodiché, ho utilizzato il comando `ls` per visualizzare tutti i file e le directory presenti in "/root" e ho notato che c'era solo un file denominato "proof.txt" ovvero il secondo documento che stavo cercando.
 
 Infine, ho provato a visualizzare il contenuto di questo file con `cat proof.txt` e ho ottenuto la prova che sono riuscita ad ottenere il controllo totale della macchina Inferno.
 
