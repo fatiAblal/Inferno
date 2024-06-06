@@ -122,16 +122,16 @@ Dopo aver esplorato il file system e scoperto ulteriori credenziali, abbiamo ese
 
 Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lista seguente sono elencate le diverse vulnerabilità, con i link alle rispettive pagine CWE e i relativi CVSS base scores:
 - **Credential Stuffing:** [https://capec.mitre.org/data/definitions/600.html](https://capec.mitre.org/data/definitions/600.html)
-  - **Severity media:** 6.5 : [AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N](AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N)
+  - **Severity media:** 6.5 : [AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N&version=3.1)
 
 - **Code Injection:** [https://owasp.org/www-community/attacks/Code_Injection](https://owasp.org/www-community/attacks/Code_Injection)
-  - **Severity alta:** 8.0 : [link](AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)
+  - **Severity alta:** 8.0 : [AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H&version=3.1)
 
 - **Hardcoded Password:** [https://cwe.mitre.org/data/definitions/259.html](https://cwe.mitre.org/data/definitions/259.html)
-  - **Severity media:** 6.6 : [AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L](AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L)
+  - **Severity media:** 6.6 : [AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L&version=3.1)
 
 - **Sudo Misconfiguration:** [https://cwe.mitre.org/data/definitions/250.html](https://cwe.mitre.org/data/definitions/250.html)
-  - **Severity alta:** 7.8 : [AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)](AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)
+  - **Severity alta:** 7.8 : [AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H&version=3.1)
 
 
 
