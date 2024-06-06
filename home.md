@@ -6,7 +6,7 @@ Il report fornisce un'analisi dettagliata di una demo in cui è stato simulato u
 ## RECONNAISSANCE
 Ho iniziato individuando su quale indirizzo IP si trovasse la macchina “Inferno”. Dopo di che, cercando tale indirizzo sul browser è apparsa la seguente pagina web statica:
 
-![Pagina statica ottenuta](images/paginaStatica.png)
+<center>![Pagina statica ottenuta](images/paginaStatica.png)</center>
 
 Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identificare potenziali punti di ingresso. Le attività principali includevano:
 
@@ -14,7 +14,7 @@ Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identifi
   - `nmap 10.0.2.11`: per rilevare gli host, le porte aperte e i servizi in esecuzione sulla macchina target. Risultato: una lunga lista di open ports. Tuttavia, molte di queste sono rabbit holes, ovvero dei falsi positivi. Quindi per ovviare a questo problema è stata eseguita una variante di nmaps:
   - `nmaps -sCV 10.0.2.11 -vv`: per rilevare informazioni aggiuntive come dettagli sull’OS e potenziali vulnerabilità permettendo così l’identificazione dei servizi d’interesse per questa simulazione. Risultato: ci sono due porte effettivamente aperte e sono evidenziate nella figura sottostante:
 
-![Porte realmente aperte](images/porteAperte.png)
+<center>![Porte realmente aperte](images/porteAperte.png)</center>
 
 - **Gobuster**: uno strumento di brute force utilizzato per scoprire file e directory nascosti su un server web. Ho utilizzato Gobuster con il comando:
   - `gobuster dir -u 10.0.2.11 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`: specifica il percorso della wordlist da utilizzare per la scansione. La wordlist contiene un elenco di nomi di directory e file comuni che Gobuster proverà a trovare sul server web target.
@@ -23,7 +23,7 @@ Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identifi
 ## INITIAL ACCESS
 Tentando di accedere all'indirizzo 10.0.2.11/inferno nel browser, è comparsa una finestra di login che richiedeva l'inserimento di username e password di tipologia Basic Auth identificando così un possibile punto di ingresso nel server web.
 
-![Finestra di login ottenuta](images/finestraLogin.png)
+<center>![Finestra di login ottenuta](images/finestraLogin.png)</center>
 
 # CREDENTIAL ACCESS
 Per ottenere le credenziali necessarie per accedere alla finestra di login sulla macchina, ho utilizzato:
@@ -67,7 +67,7 @@ Qui, ho eseguito nuovamente il comando `ls` per esplorare il contenuto della dir
 
 Tra i file presenti, ho notato un file chiamato `download.dat`. Per visualizzare il contenuto di questo documento, ho utilizzato il comando `cat download.dat`, che ha restituito un risultato codificato in base64. Per decodificare il contenuto e visualizzarlo in chiaro, ho utilizzato il tool "Cyberchef”, uno strumento di decodifica avanzato utilizzato per convertire e visualizzare contenuti codificati in chiaro in modo rapido ed efficiente.
 
-![Risultato decodifica Cyberchef](images/cyberchef.png)
+<center>![Risultato decodifica Cyberchef](images/cyberchef.png)</center>
 
 # PRIVILEGE ESCALATION
 
@@ -78,7 +78,7 @@ Questo comando stabilisce una connessione crittografata con l'host remoto utiliz
 
 Dopo aver autenticato l'accesso tramite SSH, ho provato a fare di nuovo un po’ di esplorazione e ho trovato di nuovo il documento `local.txt` ma questa volta sono stata in grado di visualizzarne il contenuto come si può vedere nella seguente immagine:
 
-![Prima hash key](images/contenutoLocal.png)
+<center>![Prima hash key](images/contenutoLocal.png)</center>
 
 A questo punto, ho tentato una privilege escalation. Innanzitutto, ho utilizzato il comando `sudo -l`, che elenca i comandi specifici che l'utente "dante" è autorizzato ad eseguire con sudo, insieme ai relativi argomenti, se presenti. Il risultato è stato il seguente: `(root) NOPASSWD: /usr/bin/tee`, dove `tee` è un comando utilizzato in sistemi operativi Unix-like e Linux per leggere da standard input e scrivere il contenuto su standard output e su uno o più file.
 
@@ -93,7 +93,7 @@ Successivamente, ho utilizzato il comando `sudo bash -p` per avviare una nuova s
 
 Infine, ho provato a visualizzare il contenuto di questo file con `cat proof.txt` e ho ottenuto la prova che sono riuscita ad ottenere il controllo totale della macchina Inferno.
 
-![Seconda hash key](images/contenutoProof.png)
+<center>![Seconda hash key](images/contenutoProof.png)</center>
 
 ## CONCLUSIONE
 
