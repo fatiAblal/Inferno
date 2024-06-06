@@ -6,7 +6,9 @@ Il report fornisce un'analisi dettagliata di una demo in cui è stato simulato u
 ## RECONNAISSANCE
 Ho iniziato individuando su quale indirizzo IP si trovasse la macchina “Inferno”. Dopo di che, cercando tale indirizzo sul browser è apparsa la seguente pagina web statica:
 
-<center>![Pagina statica ottenuta](images/paginaStatica.png)</center>
+<center>
+  ![Pagina statica ottenuta](images/paginaStatica.png)
+</center>
 
 Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identificare potenziali punti di ingresso. Le attività principali includevano:
 
