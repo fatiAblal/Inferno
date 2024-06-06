@@ -155,6 +155,3 @@ Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lis
 
 
 
-
-<p style="color: red;">Questo è un testo rosso.</p>
-
