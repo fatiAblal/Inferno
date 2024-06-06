@@ -29,13 +29,8 @@ Tentando di accedere all'indirizzo 10.0.2.11/inferno nel browser, è comparsa un
 Per ottenere le credenziali necessarie per accedere alla finestra di login sulla macchina, ho utilizzato:
 
 - **Hydra**: è uno strumento che esegue attacchi di forza bruta sulle credenziali di accesso, testando combinazioni di nomi utente e password per ottenere accesso non autorizzato a sistemi protetti da autenticazione. Per condurre questo tipo di attacco, ho utilizzato la wordlist 'rockyou.txt', nota per contenere milioni di credenziali comuni e spesso utilizzate. Il comando utilizzato è stato il seguente:
-
-hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.0.2.11 http-get /inferno
-
-
-  Risultato: 
-username=admin
-password=dante1
+  - `hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.0.2.11 http-get /inferno`
+  Risultato: username=admin    password=dante1
 
 # FOOTHOLD
 In questa fase, ho constatato che, utilizzando le credenziali ottenute, sono riuscita ad accedere alla finestra di login precedentemente visualizzata. Tuttavia, dopo aver inserito le credenziali e confermato l'accesso, è emerso un'altra finestra di login che richiedeva nuovamente l'autenticazione. Questa situazione rappresenta una vulnerabilità poiché le credenziali vengono riutilizzate, aumentando il rischio di accessi non autorizzati.
