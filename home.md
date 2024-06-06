@@ -5,4 +5,4 @@ Il report fornisce un'analisi dettagliata di una demo in cui è stato simulato u
 
 ## RECONNAISSANCE
 Ho iniziato individuando su quale indirizzo IP si trovasse la macchina “Inferno”. Dopo di che, cercando tale indirizzo sul browser è apparsa la seguente pagina web statica:
-![Pagina statica ottenuta](images/pagina statica.png.jpg)
+![Pagina statica ottenuta](images/pagina statica.png)
