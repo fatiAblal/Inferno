@@ -6,9 +6,9 @@ Il report fornisce un'analisi dettagliata di una demo in cui è stato simulato u
 ## RECONNAISSANCE
 Ho iniziato individuando su quale indirizzo IP si trovasse la macchina “Inferno”. Dopo di che, cercando tale indirizzo sul browser è apparsa la seguente pagina web statica:
 
-<div style="text-align:center">
+<p align="center">
     <img src="images/paginaStatica.png" alt="Pagina statica ottenuta">
-</div>
+</p>
 
 Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identificare potenziali punti di ingresso. Le attività principali includevano:
 
@@ -28,8 +28,9 @@ Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identifi
 ## INITIAL ACCESS
 Tentando di accedere all'indirizzo 10.0.2.11/inferno nel browser, è comparsa una finestra di login che richiedeva l'inserimento di username e password di tipologia Basic Auth identificando così un possibile punto di ingresso nel server web.
 
-    <img src="images/finestraLogin.png" alt="Finestra di login ottenuta" align="center">
-
+<p align="center">
+<img src="images/finestraLogin.png" alt="Finestra di login ottenuta" align="center">
+</p>
 
 # CREDENTIAL ACCESS
 Per ottenere le credenziali necessarie per accedere alla finestra di login sulla macchina, ho utilizzato:
@@ -73,9 +74,9 @@ Qui, ho eseguito nuovamente il comando `ls` per esplorare il contenuto della dir
 
 Tra i file presenti, ho notato un file chiamato `download.dat`. Per visualizzare il contenuto di questo documento, ho utilizzato il comando `cat download.dat`, che ha restituito un risultato codificato in base64. Per decodificare il contenuto e visualizzarlo in chiaro, ho utilizzato il tool "Cyberchef”, uno strumento di decodifica avanzato utilizzato per convertire e visualizzare contenuti codificati in chiaro in modo rapido ed efficiente.
 
-<div style="text-align:center">
+<p align="center">
     <img src="images/cyberchef.png" alt="Risultato decodifica Cyberchef">
-</div>
+</p>
 
 
 # PRIVILEGE ESCALATION
@@ -87,9 +88,9 @@ Questo comando stabilisce una connessione crittografata con l'host remoto utiliz
 
 Dopo aver autenticato l'accesso tramite SSH, ho provato a fare di nuovo un po’ di esplorazione e ho trovato di nuovo il documento `local.txt` ma questa volta sono stata in grado di visualizzarne il contenuto come si può vedere nella seguente immagine:
 
-<div style="text-align:center">
+<p align="center">
     <img src="images/contenutoLocal.png" alt="Prima hash key trovata">
-</div>
+</p>
 
 
 A questo punto, ho tentato una privilege escalation. Innanzitutto, ho utilizzato il comando `sudo -l`, che elenca i comandi specifici che l'utente "dante" è autorizzato ad eseguire con sudo, insieme ai relativi argomenti, se presenti. Il risultato è stato il seguente: `(root) NOPASSWD: /usr/bin/tee`, dove `tee` è un comando utilizzato in sistemi operativi Unix-like e Linux per leggere da standard input e scrivere il contenuto su standard output e su uno o più file.
@@ -104,9 +105,9 @@ Successivamente, ho utilizzato il comando `sudo bash -p` per avviare una nuova s
 
 Infine, ho provato a visualizzare il contenuto di questo file con `cat proof.txt` e ho ottenuto la prova che sono riuscita ad ottenere il controllo totale della macchina Inferno.
 
-<div style="text-align:center">
+<p align="center">
     <img src="images/contenutoProof.png" alt="Seconda hash key trovata">
-</div>
+</p>
 
 
 ## CONCLUSIONE
@@ -131,6 +132,7 @@ Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lis
 
 - **Sudo Misconfiguration:** [Link](https://cwe.mitre.org/data/definitions/250.html)
   - **Severity alta:** 7.8 : [link](AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)
+
 
 ## REFERENZE
 
