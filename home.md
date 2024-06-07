@@ -124,7 +124,7 @@ A seguire, abbiamo scoperto una vulnerabilità di riutilizzo delle credenziali, 
 
 Dopo aver esplorato il file system e scoperto ulteriori credenziali, abbiamo eseguito un processo di privilege escalation, ottenendo privilegi di root e dimostrando il totale controllo sulla macchina "Inferno".
 
-Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lista seguente sono elencate le diverse vulnerabilità, con i link alle rispettive pagine CWE e i relativi CVSS base scores:
+Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lista seguente sono elencate le diverse vulnerabilità, con i link alle rispettive pagine e i relativi CVSS base scores:
 - **Credential Stuffing:** [https://capec.mitre.org/data/definitions/600.html](https://capec.mitre.org/data/definitions/600.html)
   - Severity media: **6.5** : [AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N&version=3.1)
 
