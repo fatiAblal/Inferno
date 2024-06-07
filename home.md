@@ -120,7 +120,7 @@ La dimostrazione ha fornito un'analisi dettagliata e approfondita di un attacco 
 
 Attraverso una serie di fasi ben definite, abbiamo illustrato il ciclo completo di un attacco informatico, partendo dalla fase di reconnaissance, dove sono stati identificati potenziali punti di ingresso e scoperti servizi esposti sulla macchina target. Successivamente, durante la fase di initial access, abbiamo ottenuto le credenziali di accesso utilizzando attacchi di brute force e abbiamo iniziato a esplorare il sistema.
 
-A seguire, abbiamo scoperto una vulnerabilità di riutilizzo delle credenziali, che ci ha permesso di superare ulteriori livelli di autenticazione e ottenere un maggiore controllo sul sistema. Utilizzando un exploit per Codiad, abbiamo eseguito con successo un attacco di remote code execution, ottenendo l'accesso alla shell del server remoto.
+A seguire, abbiamo scoperto una vulnerabilità di riutilizzo delle credenziali, che ci ha permesso di superare ulteriori livelli di autenticazione e ottenere un maggiore controllo sul sistema. Utilizzando un exploit per Codiad, abbiamo avuto remote code execution, ottenendo l'accesso alla shell del server remoto.
 
 Dopo aver esplorato il file system e scoperto ulteriori credenziali, abbiamo eseguito un processo di privilege escalation, ottenendo privilegi di root e dimostrando il totale controllo sulla macchina "Inferno".
 
