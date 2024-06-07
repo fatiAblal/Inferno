@@ -27,7 +27,7 @@ Successivamente alla fase di enumeration delle porte e dei servizi si è ritenut
   Risultato: l'esistenza di una directory denominata ‘/inferno’ che potrebbe indicare un sito web alternativo non immediatamente visibile o linkato dalle pagine principali. Potrebbe quindi contenere file sensibili, moduli di login, o altre risorse che possono essere sfruttate durante un penetration test. È dunque un punto di ingresso potenziale che merita ulteriori indagini.
 
 ## INITIAL ACCESS
-Tentando di accedere all'indirizzo 10.0.2.11/inferno nel browser, è comparsa una finestra di login che richiedeva l'inserimento di username e password di tipologia Basic Auth identificando così un possibile punto di ingresso nel server web.
+Tentando di accedere all'indirizzo 10.0.2.11/inferno nel browser, è comparsa una finestra di login che richiedeva l'inserimento di username e password di tipologia Basic Auth, identificando così un possibile punto di ingresso nel server web.
 
 <p align="center">
 <img src="images/finestraLogin.png" alt="Finestra di login ottenuta" align="center">
