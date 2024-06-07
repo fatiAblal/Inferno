@@ -125,6 +125,9 @@ A seguire, abbiamo scoperto una vulnerabilità di riutilizzo delle credenziali, 
 Dopo aver esplorato il file system e scoperto ulteriori credenziali, abbiamo eseguito un processo di privilege escalation, ottenendo privilegi di root e dimostrando il totale controllo sulla macchina "Inferno".
 
 Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lista seguente sono elencate le diverse vulnerabilità, con i link alle rispettive pagine e i relativi CVSS base scores:
+
+- **Identification and Authentication Failures:** [https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/)
+  - Severity media: **6.8** : [AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L](AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L)
 - **Credential Stuffing:** [https://capec.mitre.org/data/definitions/600.html](https://capec.mitre.org/data/definitions/600.html)
   - Severity media: **6.5** : [AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N&version=3.1)
 
