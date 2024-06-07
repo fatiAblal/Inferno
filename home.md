@@ -1,9 +1,7 @@
 # INFERNO: UN VIAGGIO ATTRAVERSO LE FASI DELL’ATTACCO
 
-
 ## INTRODUZIONE
 Il report fornisce un'analisi dettagliata di una demo in cui è stato simulato un attacco alla macchina virtuale "Inferno" scaricata da Vulnhub Labs. L'obiettivo della dimostrazione era di illustrare praticamente le tecniche di penetration testing e le vulnerabilità comuni nella cybersecurity. "Inferno" è una macchina virtuale progettata per l'apprendimento e la pratica del penetration testing, offrendo un ambiente simulato per sviluppare competenze nel rilevamento e nell'exploit di vulnerabilità informatiche. Dal punto di vista pratico si richiedeva di trovare le due hash keys, una associata all'utente 'user' (contenuta nel file local.txt) e l'altra all'utente 'root' (contenuta nel file proof.txt), presenti nella macchina al fine di acquisire i privilegi di amministratore ('root'). Per eseguire la demo, sono state utilizzate due macchine virtuali: "Kali Linux" e "Inferno", configurate per creare un ambiente di test idoneo.
-
 
 ## RECONNAISSANCE
 Ho iniziato individuando su quale indirizzo IP si trovasse la macchina “Inferno”. Dopo di che, cercando tale indirizzo sul browser è apparsa la seguente pagina web statica:
@@ -28,14 +26,12 @@ Successivamente alla fase di enumeration delle porte e dei servizi si è ritenut
   - `gobuster dir -u 10.0.2.11 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`: specifica il percorso della wordlist da utilizzare per la scansione. La wordlist contiene un elenco di nomi di directory e file comuni che Gobuster proverà a trovare sul server web target.
   Risultato: l'esistenza di una directory denominata ‘/inferno’ che potrebbe indicare un sito web alternativo non immediatamente visibile o linkato dalle pagine principali. Potrebbe quindi contenere file sensibili, moduli di login, o altre risorse che possono essere sfruttate durante un penetration test. È dunque un punto di ingresso potenziale che merita ulteriori indagini.
 
-
 ## INITIAL ACCESS
 Tentando di accedere all'indirizzo 10.0.2.11/inferno nel browser, è comparsa una finestra di login che richiedeva l'inserimento di username e password di tipologia Basic Auth, identificando così un possibile punto di ingresso nel server web.
 
 <p align="center">
 <img src="images/finestraLogin.png" alt="Finestra di login ottenuta" align="center">
 </p>
-
 
 # CREDENTIAL ACCESS
 Per ottenere le credenziali necessarie per accedere alla finestra di login sulla macchina, ho utilizzato:
@@ -45,14 +41,12 @@ Per ottenere le credenziali necessarie per accedere alla finestra di login sulla
   
   Risultato: username=admin    password=dante1
 
-
 # FOOTHOLD
 In questa fase, ho constatato che, utilizzando le credenziali ottenute, sono riuscita ad accedere alla finestra di login precedentemente visualizzata. Tuttavia, dopo aver inserito le credenziali e confermato l'accesso, è emerso un'altra finestra di login che richiedeva nuovamente l'autenticazione. Questa situazione rappresenta una vulnerabilità poiché le credenziali vengono riutilizzate, aumentando il rischio di accessi non autorizzati.
 
 Successivamente, ho esplorato la possibilità di modificare file .php per ottenere un maggiore controllo sul sistema. Tuttavia, a causa delle restrizioni sui permessi, non ho potuto apportare modifiche ai file identificati. In alternativa, ho analizzato la struttura di uno dei file .php per comprendere meglio l'ambiente di sviluppo utilizzato.
 
 Dopo aver scoperto che il sistema utilizza Codiad, un ambiente di sviluppo integrato (IDE) basato sul web, ho proseguito con una ricerca online per individuare exploit già esistenti per Codiad. Ho trovato un exploit su GitHub all'indirizzo [https://github.com/WangYihang/Codiad-Remote-Code-Execute-Exploit](https://github.com/WangYihang/Codiad-Remote-Code-Execute-Exploit). In seguito, ho scaricato il file exploit.py e l'ho memorizzato sul desktop della mia macchina Kali.
-
 
 # EXPLOITATION
 
@@ -72,7 +66,6 @@ Risultato: nel terzo terminale dopo aver confermato l’esecuzione del comando c
 www-data@Inferno:/var/www/html/inferno/components/filemanager$
 
 Questo indica che ho ottenuto accesso al sistema remoto tramite la shell inversa. Attualmente quindi, sto operando nell'ambiente del server remoto sotto l'utente www-data, nella directory /var/www/html/inferno/components/filemanager.
-
 
 # CREDENTIAL DISCOVERY E LATERAL MOVEMENT 
 
