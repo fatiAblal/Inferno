@@ -79,7 +79,8 @@ Tra i file presenti, ho notato un file chiamato `.download.dat`. Per visualizzar
     <img src="images/cyberchef.png" alt="Risultato decodifica Cyberchef">
 </p>
 
-Alla fine del messaggio decodificato è stato rivelato un nome utente e una password in chiaro ovvero username=dante password=V1rg1l10h3lpm3
+Alla fine del messaggio decodificato è stato rivelato un nome utente e una password in chiaro ovvero:
+username=dante password=V1rg1l10h3lpm3
 
 
 # PRIVILEGE ESCALATION
