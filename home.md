@@ -73,7 +73,7 @@ A questo punto, ho eseguito una serie di comandi per esplorare la struttura del 
 
 Qui, ho eseguito nuovamente il comando `ls` per esplorare il contenuto della directory "dante" e qui ho trovato il documento `local.txt` ma provando ad eseguirlo ho ottenuto come risposta “Permission denied” in quanto non ho i privilegi necessari. Successivamente ho utilizzato il comando `ls -lah` per ottenere un elenco dettagliato, inclusi i file e le directory nascoste nella directory dante. Dopo aver esplorato questa directory, mi sono spostata nella directory "Downloads" utilizzando il comando `cd /home/dante/Downloads/`, dove ho eseguito ulteriori esplorazioni utilizzando ancora una volta il comando `ls -lah`.
 
-Tra i file presenti, ho notato un file chiamato `download.dat`. Per visualizzare il contenuto di questo documento, ho utilizzato il comando `cat download.dat`, che ha restituito un risultato codificato in base64. Per decodificare il contenuto e visualizzarlo in chiaro, ho utilizzato il tool "Cyberchef”, uno strumento di decodifica avanzato utilizzato per convertire e visualizzare contenuti codificati in chiaro in modo rapido ed efficiente.
+Tra i file presenti, ho notato un file chiamato `.download.dat`. Per visualizzare il contenuto di questo documento, ho utilizzato il comando `cat .download.dat`, che ha restituito un risultato codificato in base64. Per decodificare il contenuto e visualizzarlo in chiaro, ho utilizzato il tool "Cyberchef”, uno strumento di decodifica avanzato utilizzato per convertire e visualizzare contenuti codificati in chiaro in modo rapido ed efficiente.
 
 <p align="center">
     <img src="images/cyberchef.png" alt="Risultato decodifica Cyberchef">
