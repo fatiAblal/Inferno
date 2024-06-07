@@ -90,7 +90,7 @@ Dopo aver trovato le credenziali, ho aperto un nuovo terminale e ho tentato di a
 
 Questo comando stabilisce una connessione crittografata con l'host remoto utilizzando l'account utente "dante". Successivamente, mi è stata richiesta la password dell'account "dante" per autenticarmi e accedere all'host remoto tramite SSH. Una volta autenticata con successo, sono stata connessa all'host remoto e ho ottenuto l'accesso alla sua shell per eseguire comandi e interagire con il sistema.
 
-Dopo aver autenticato l'accesso tramite SSH, ho provato a fare di nuovo un po’ di esplorazione e ho trovato di nuovo il documento `local.txt` ma questa volta sono stata in grado di visualizzarne il contenuto come si può vedere nella seguente immagine:
+Dopo aver autenticato l'accesso tramite SSH, ho provato a fare di nuovo un po’ di esplorazione e ho trovato la prima flag all'interno del documento `local.txt` nella home di dante:
 
 <p align="center">
     <img src="images/contenutoLocal.png" alt="Prima hash key trovata">
