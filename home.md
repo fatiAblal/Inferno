@@ -21,6 +21,7 @@ Ho dunque proseguito raccogliendo i dati preliminari sulla macchina per identifi
 </p>
 
 
+Successivamente alla fase di enumeration delle porte e dei servizi si è ritenuto necessario enumerare anche le cartelle e i file della web application in ascolto sulla porta 80:
 - **Gobuster**: uno strumento di brute force utilizzato per scoprire file e directory nascosti su un server web. Ho utilizzato Gobuster con il comando:
   - `gobuster dir -u 10.0.2.11 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`: specifica il percorso della wordlist da utilizzare per la scansione. La wordlist contiene un elenco di nomi di directory e file comuni che Gobuster proverà a trovare sul server web target.
   Risultato: l'esistenza di una directory denominata ‘/inferno’ potrebbe indicare un sito web alternativo non è immediatamente visibile o linkato dalle pagine principali. Potrebbe quindi contenere file sensibili, moduli di login, o altre risorse che possono essere sfruttate durante un penetration test. È dunque un punto di ingresso potenziale che merita ulteriori indagini.
