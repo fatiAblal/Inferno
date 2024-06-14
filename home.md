@@ -42,7 +42,7 @@ Per ottenere le credenziali necessarie per accedere alla finestra di login sulla
   Risultato: username=admin    password=dante1
 
 # FOOTHOLD
-In questa fase, ho constatato che, utilizzando le credenziali ottenute, sono riuscita ad accedere alla finestra di login precedentemente visualizzata. Tuttavia, dopo aver inserito le credenziali e confermato l'accesso, è emerso un'altra finestra di login che richiedeva nuovamente l'autenticazione.
+In questa fase, ho constatato che, utilizzando le credenziali ottenute, sono riuscita ad accedere alla finestra di login precedentemente visualizzata. Tuttavia, dopo aver inserito le credenziali e confermato l'accesso, è emerso un'altra finestra di login che richiedeva nuovamente l'autenticazione. Ho quindi riutilizzato le stesse credenziali.
 
 Successivamente, ho esplorato la possibilità di modificare file .php per ottenere un maggiore controllo sul sistema. Tuttavia, a causa delle restrizioni sui permessi, non ho potuto apportare modifiche ai file identificati. In alternativa, ho analizzato la struttura di uno dei file .php per comprendere meglio l'ambiente di sviluppo utilizzato.
 
@@ -158,6 +158,12 @@ Infine, per avere un quadro completo delle vulnerabilità riscontrate, nella lis
 [5] NVD, "CVSS v3.1 Base Score Calculator". [Online]. Disponibile: [https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 
 [6] TryHackMe, "Inferno", creata da Mindsflee, 12 febbraio 2021. [Online]. Disponibile: [https://tryhackme.com/r/room/inferno](https://tryhackme.com/r/room/inferno)
+
+[7] Codiad, "Codiad Wiki". [Online]. Disponibile: [https://github.com/Codiad/Codiad/wiki](https://github.com/Codiad/Codiad/wiki)
+
+[8] D4rkn1gh7, "TryHackMe Inferno Walkthrough", 2021. [Online]. Disponibile: [https://d4rkn1gh7.github.io/posts/ctf/tryhackme/inferno/](https://d4rkn1gh7.github.io/posts/ctf/tryhackme/inferno/)
+
+[9] Klefz, "TryHackMe Inferno Write-up", 13 febbraio 2021. [Online]. Disponibile: [https://klefz.se/2021/02/13/tryhackme-inferno-write-up/](https://klefz.se/2021/02/13/tryhackme-inferno-write-up/)
 
 
  
