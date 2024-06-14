@@ -42,7 +42,7 @@ Per ottenere le credenziali necessarie per accedere alla finestra di login sulla
   Risultato: username=admin    password=dante1
 
 # FOOTHOLD
-In questa fase, ho constatato che, utilizzando le credenziali ottenute, sono riuscita ad accedere alla finestra di login precedentemente visualizzata. Tuttavia, dopo aver inserito le credenziali e confermato l'accesso, è emerso un'altra finestra di login che richiedeva nuovamente l'autenticazione. Questa situazione rappresenta una vulnerabilità poiché le credenziali vengono riutilizzate, aumentando il rischio di accessi non autorizzati.
+In questa fase, ho constatato che, utilizzando le credenziali ottenute, sono riuscita ad accedere alla finestra di login precedentemente visualizzata. Tuttavia, dopo aver inserito le credenziali e confermato l'accesso, è emerso un'altra finestra di login che richiedeva nuovamente l'autenticazione.
 
 Successivamente, ho esplorato la possibilità di modificare file .php per ottenere un maggiore controllo sul sistema. Tuttavia, a causa delle restrizioni sui permessi, non ho potuto apportare modifiche ai file identificati. In alternativa, ho analizzato la struttura di uno dei file .php per comprendere meglio l'ambiente di sviluppo utilizzato.
 
@@ -65,7 +65,7 @@ Nel terzo terminale, ho eseguito:
 Risultato: nel terzo terminale dopo aver confermato l’esecuzione del comando con il tasto yes ho ottenuto la reverse shell.
 www-data@Inferno:/var/www/html/inferno/components/filemanager$
 
-Questo indica che ho ottenuto accesso al sistema remoto tramite la shell inversa. Attualmente quindi, sto operando nell'ambiente del server remoto sotto l'utente www-data, nella directory /var/www/html/inferno/components/filemanager.
+Questo indica che ho ottenuto accesso al sistema remoto tramite la reverse shell. Attualmente quindi, sto operando nell'ambiente del server remoto sotto l'utente www-data, nella directory /var/www/html/inferno/components/filemanager.
 
 # CREDENTIAL DISCOVERY E LATERAL MOVEMENT 
 
