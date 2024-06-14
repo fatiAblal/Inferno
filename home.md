@@ -157,13 +157,15 @@ Infine, per avere un quadro completo, di seguito sono riportati degli approfondi
 
 [5] NVD, "CVSS v3.1 Base Score Calculator". [Online]. Disponibile: [https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 
-[6] TryHackMe, "Inferno", creata da Mindsflee, 12 febbraio 2021. [Online]. Disponibile: [https://tryhackme.com/r/room/inferno](https://tryhackme.com/r/room/inferno)
+[6] SecOps Solution, "Understanding CVSS Base Score Calculator". [Online]. Disponibile: [https://www.secopsolution.com/blog/understanding-cvss-base-score-calculator](https://www.secopsolution.com/blog/understanding-cvss-base-score-calculator)
 
-[7] Codiad, "Codiad Wiki". [Online]. Disponibile: [https://github.com/Codiad/Codiad/wiki](https://github.com/Codiad/Codiad/wiki)
+[7] TryHackMe, "Inferno", creata da Mindsflee, 12 febbraio 2021. [Online]. Disponibile: [https://tryhackme.com/r/room/inferno](https://tryhackme.com/r/room/inferno)
 
-[8] D4rkn1gh7, "TryHackMe Inferno Walkthrough", 2021. [Online]. Disponibile: [https://d4rkn1gh7.github.io/posts/ctf/tryhackme/inferno/](https://d4rkn1gh7.github.io/posts/ctf/tryhackme/inferno/)
+[8] Codiad, "Codiad Wiki". [Online]. Disponibile: [https://github.com/Codiad/Codiad/wiki](https://github.com/Codiad/Codiad/wiki)
 
-[9] Klefz, "TryHackMe Inferno Write-up", 13 febbraio 2021. [Online]. Disponibile: [https://klefz.se/2021/02/13/tryhackme-inferno-write-up/](https://klefz.se/2021/02/13/tryhackme-inferno-write-up/)
+[9] D4rkn1gh7, "TryHackMe Inferno Walkthrough", 2021. [Online]. Disponibile: [https://d4rkn1gh7.github.io/posts/ctf/tryhackme/inferno/](https://d4rkn1gh7.github.io/posts/ctf/tryhackme/inferno/)
+
+[10] Klefz, "TryHackMe Inferno Write-up", 13 febbraio 2021. [Online]. Disponibile: [https://klefz.se/2021/02/13/tryhackme-inferno-write-up/](https://klefz.se/2021/02/13/tryhackme-inferno-write-up/)
 
 
  
